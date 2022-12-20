@@ -1,7 +1,20 @@
-<?php 
+<?php
+
+use Src\Share\Session;
+
+  require_once 'bootstrap.php'; 
+
   echo "<style>";
   include 'index.css';
   echo "<style>";
+
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+    Session::isLogged();
+     header('Location: app.php');
+  }
 ?>
 </style>
 

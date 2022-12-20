@@ -2,6 +2,8 @@
   echo "<style>";
   include 'index.css';
   echo "<style>";
+  
+  require_once 'bootstrap.php'; 
 ?>
 </style>
 
@@ -14,8 +16,7 @@
 <?php include './src/components/header/index.php' ?>
   <main>
     <div class="content">
-        <h1 class="calltitle">Vem pro Gerenciador Kabum</h1>
-        <a role="button" class="call" href="signup.php">Cadastre-se agora</a>
+        <h1 class="calltitle">APP</h1>
     </div>
   </main>
   </body>

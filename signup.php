@@ -1,7 +1,12 @@
-<?php 
+<?php
+
+use Src\Share\Session;
+
   echo "<style>";
   include 'index.css';
   echo "<style>";
+  
+  require_once 'bootstrap.php'; 
 ?>
 </style>
 
