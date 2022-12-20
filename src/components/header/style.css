@@ -1,0 +1,29 @@
+header {
+    position: relative;
+ }
+ .upheader {
+     width: 100vw;
+     height: 10vh;
+     background-color: var(--bluePrimary);
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     flex-direction: row;
+     padding: 24px 48px;
+ }
+ .bottomheader {
+     width: 100vw;
+     height: 2vh;
+     background-color: var(--orangePrimary);
+ }
+ 
+ button, span {
+     all: unset;
+     cursor: pointer;
+     color: white;
+     font-size: large;
+ }
+ 
+ button:hover {
+     color: var(--background);
+ }

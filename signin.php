@@ -14,8 +14,7 @@
 <?php include './src/components/header/index.php' ?>
   <main>
     <div class="content">
-        <h1 class="calltitle">Vem pro Gerenciador Kabum</h1>
-        <buton class="call">Cadastre-se agora</buton>
+        <h1 class="calltitle">Login</h1>
     </div>
   </main>
   </body>
