@@ -1,0 +1,91 @@
+:root {
+    --background: #f2f2f5;
+    --bluePrimary: #0060B1;
+    --orangePrimary: #FF6500;
+    --black: #000000;
+    --white: #FFFFFF;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+   position: relative;
+}
+.upheader {
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--bluePrimary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 24px 48px;
+}
+.bottomheader {
+    width: 100vw;
+    height: 2vh;
+    background-color: var(--orangePrimary);
+}
+
+button, span {
+    all: unset;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+}
+
+button:hover {
+    color: var(--background);
+}
+
+main {
+    width: 100vw;
+    height: 78vh;
+    position: relative;
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(237,171,40);
+    background: linear-gradient(90deg, rgba(237,171,40,1) 0%, rgba(235,143,23,1) 35%, rgba(232,136,81,1) 100%);
+}
+
+.call {
+
+    width: 50%;
+    height: 80px;
+    color: var(--orangePrimary);
+    border-radius: 12px;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    cursor: pointer;
+
+}
+
+.calltitle {
+
+    color: white;
+    font-size: 4rem;
+
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--black);
+}
