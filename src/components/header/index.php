@@ -6,10 +6,13 @@ echo '</style>'
 
 <header>
 <div class="upheader">
+  
+  <a role="button" href="index.php">Home</button>
+
   <div>
-    <button>Entrar</button>
-     <span>/</span>
-    <button>Cadastrar</button>
+    <a role="button" href="signin.php">Entrar</button>
+     <span>&nbsp;/&nbsp;</span>
+    <a role="button" href="signup.php">Cadastrar</button>
   </div>
 </div>
 <div class="bottomheader"></div>

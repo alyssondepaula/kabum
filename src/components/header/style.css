@@ -7,17 +7,25 @@ header {
      background-color: var(--bluePrimary);
      display: flex;
      align-items: center;
-     justify-content: flex-end;
+     justify-content: space-between;
      flex-direction: row;
      padding: 24px 48px;
+     position: relative;
  }
+
+ .upheader > div {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
  .bottomheader {
      width: 100vw;
      height: 2vh;
      background-color: var(--orangePrimary);
  }
  
- button, span {
+ button, span, a {
      all: unset;
      cursor: pointer;
      color: white;

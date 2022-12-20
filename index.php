@@ -15,7 +15,7 @@
   <main>
     <div class="content">
         <h1 class="calltitle">Vem pro Gerenciador Kabum</h1>
-        <buton class="call">Cadastre-se agora</buton>
+        <a role="button" class="call" href="signup.php">Cadastre-se agora</a>
     </div>
   </main>
   </body>
