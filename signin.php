@@ -12,7 +12,7 @@ use Src\Share\Session;
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
-    Session::isLogged();
+    Session::signIn(23);
      header('Location: app.php');
   }
 ?>

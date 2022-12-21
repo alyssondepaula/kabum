@@ -11,14 +11,13 @@ class Session
             session_start();
         }
     }
-    public static function signIn($user)
+    public static function signIn($id)
     {
 
         self::start();
 
         $_SESSION['user'] = [
-            'id'=> $user->id,
-            'name'=> $user->name,
+            'id'=> $id,
         ];
         header('location: app.php');
         exit;
@@ -33,7 +32,7 @@ class Session
         exit;
     }
 
-    public static function isLogged()
+    public static function isAuth()
     {
         self::start();
         return isset($_SESSION['user']['id']);
@@ -41,7 +40,7 @@ class Session
 
     public static function authPage()
     {
-        if (self::isLogged()) {
+        if (self::isAuth()) {
             header('location: index.php');
             exit;
         }
