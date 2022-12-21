@@ -8,31 +8,34 @@ use Exception;
 use Src\Modules\Users\Mappers\Usermap;
 use Src\Share\Session;
 
-class LoginUserCase {
+class CreateAccountUserCase {
 
-    static function execute($email, $password){
+    static function execute($name, $email, $password){
 
         try {
 
             $mysqlUserRepo = new UserRepository();
             $user = $mysqlUserRepo->findUser($email);
+            
+            if($user){
 
-    
-            if(!$user){
-                throw new Exception("Usuario não existe");
-            }
-    
-            if($password != $user->password){
-               throw new Exception("Senha incorreta");
+                throw new Exception("Usuario já existe");
             }
 
+            $user = $mysqlUserRepo->create($name, $email, $password);
             $userMap = Usermap::UserMap($user);
 
             Session::signIn($userMap);
 
+
         } catch (Exception $e) {
             $message = $e->getMessage();
-            echo "<script type='text/javascript'>alert('$message');</script>";
+            if($message){
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }else{
+                echo "<script type='text/javascript'>alert('Erro ao Cadastrar');</script>";
+            }
+            
         }
 
 

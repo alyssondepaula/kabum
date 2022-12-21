@@ -13,12 +13,14 @@ class Connection {
     const PASS = 'password';
 
 
-    private $connection;
+    private $connection = "";
 
     public function __construct()
     {
         $this->setConnection();
     }
+
+    
 
     private function setConnection() {
         try {
@@ -37,16 +39,21 @@ class Connection {
         }
     }
 
+    public function getConnection(){
+        return $this->connection;
+    }
+
     public function execute($query, $params = []) {
         try {
             $statement = $this->connection->prepare($query);
             $statement->execute($params);
-    
 
             return $statement;
         } catch (PDOException $e) {
             die('ERROR: ' . $e->getMessage());
         }
     }
+
+   
 
 }

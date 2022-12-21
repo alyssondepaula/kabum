@@ -10,6 +10,8 @@ abstract class Usermap {
 
         $user = new User();
 
+        echo $obj->id;
+
         $user->id = $obj->id;
         $user->name = $obj->email;
         $user->email = $obj->email;

@@ -6,9 +6,7 @@ echo '<style>';
 include "signinstyle.css"; 
 echo '</style>';
 
-session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       LoginUserCase::execute($_POST['email'],$_POST['password']);
   }
@@ -20,6 +18,7 @@ ini_set('display_errors', '1');
 <html>
     <head>
          <title>Site Oficial - Gerenciador</title>
+         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
 <body>
 <?php include INCLUDES.'/Header/index.php'; ?>

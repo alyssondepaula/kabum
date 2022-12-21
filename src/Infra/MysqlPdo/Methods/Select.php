@@ -14,6 +14,7 @@ class Select {
         $order = strlen($order) ? 'ORDER BY ' . $order : '';
         $limit = strlen($limit) ? 'LIMIT ' . $limit : '';
         $query = 'SELECT ' . $fields . ' FROM ' . $table . ' ' . $where . ' ' . $order . ' ' . $limit;
+        
         return $connection->execute($query);
 
     }
