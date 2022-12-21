@@ -1,5 +1,8 @@
 <?php
 
+$pathInPieces = explode('/', $_SERVER['DOCUMENT_ROOT']);
+
+
 define("DIR", __DIR__);
 define("AUTOLOAD", __DIR__.'/vendor/autoload.php');
 define("VIEWS", __DIR__.'/src/Views/');
