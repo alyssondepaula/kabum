@@ -32,9 +32,9 @@ abstract class MyRoutes
     {
         $isAuth = Session::isAuth();
         if($isAuth){
-            $this->app();
+            header('location: /app');
         }else{
-            $this->home();
+            header('location: /');
         }
     }
 }
