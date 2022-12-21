@@ -1,6 +1,6 @@
 <?php
 echo '<style>'; 
-include "style.css"; 
+include "footerstyle.css"; 
 echo '</style>'
 ?>
 

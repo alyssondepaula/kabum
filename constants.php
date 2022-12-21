@@ -1,12 +1,10 @@
 <?php
 
-$pathInPieces = explode('/', $_SERVER['DOCUMENT_ROOT']);
-echo $pathInPieces[0];
+define("DIR", __DIR__);
+define("AUTOLOAD", __DIR__.'/vendor/autoload.php');
+define("VIEWS", __DIR__.'/src/Views/');
+define("INCLUDES", __DIR__.'/src/Views/Components/');
+define("PAGES", __DIR__.'/src/Views/Pages');
 
-define("ROOT", $pathInPieces[0]);
-define("DIR", ROOT);
-define("AUTOLOAD", ROOT.'/vendor/autoload.php');
-define("UTILS", ROOT.'/src/Utils');
-define("COMPONENTS", ROOT.'/src/components/');
 
 ?>
