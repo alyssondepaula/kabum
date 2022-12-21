@@ -1,16 +1,16 @@
 <?php
 
-use Src\Share\Session;
+use Src\Modules\Users\Usecases\LoginUserCase;
 
 echo '<style>'; 
 include "signinstyle.css"; 
 echo '</style>';
 
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
-    Session::signIn(23);
-     header('Location: app.php');
+      LoginUserCase::execute($_POST['email'],$_POST['password']);
   }
 
 ?>

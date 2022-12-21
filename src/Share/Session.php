@@ -2,6 +2,8 @@
 
 namespace Src\Share;
 
+use Src\Modules\Users\Entities\User;
+
 class Session
 {
 
@@ -11,13 +13,14 @@ class Session
             session_start();
         }
     }
-    public static function signIn($id)
+    public static function signIn(User $user)
     {
-
         self::start();
-
         $_SESSION['user'] = [
-            'id'=> $id,
+            'id'=> $user->id,
+            'name'=>$user->name,
+            'email'=>$user->email
+            
         ];
         header('location: app.php');
         exit;
