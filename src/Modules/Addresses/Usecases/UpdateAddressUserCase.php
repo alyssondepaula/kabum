@@ -19,7 +19,6 @@ class UpdateAddressUserCase {
 
             $mysqlAddressRepo->update($addressMap);
       
-            $user= Session::getUser();
             header('location: /addresses?id='.$clientId.'');
 
         } catch (Exception $e) {

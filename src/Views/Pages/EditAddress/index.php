@@ -60,44 +60,44 @@ echo '</style>';
                 </div>
                 <div>
                 <label style="margin-left: 12;">N°:</label>
-                <input type="text" pattern="\d*" minlength="4" maxlength="4" value=<?= $address->number ?> name="number"  required/>
+                <input type="text" pattern="\d*" minlength="1" maxlength="4" value=<?= $address->number ?> name="number"  required/>
                 </div> 
                 </div>
                 <label>CEP:</label>
                 <input type="text" pattern="\d*" minlength="8" maxlength="8" value=<?= $address->zip ?> name="zip"  required/>
                 <label>Complemento:</label>
-                <input type="text" minlength="10" maxlength="10" value=<?= $address->complement ?> name="complement"  required/>
+                <input type="text" minlength="2" maxlength="12" value=<?= $address->complement ?> name="complement"  required/>
                 <label>Cidade:</label>
-                <input type="text" minlength="10" maxlength="10" value=<?= $address->city ?> name="city"  required/>
-                <label>Estado:</label>
-                <select name="state" value="<?= $obCliente->estado ?>" required>
-                <option selected>AC</option>
-                <option>AL</option>
-                <option>AP</option>
-                <option>AM</option>
-                <option>BA</option>
-                <option>CE</option>
-                <option>ES</option>
-                <option>GO</option>
-                <option>MA</option>
-                <option>MT</option>
-                <option>MS</option>
-                <option>MG</option>
-                <option>PA</option>
-                <option>PB</option>
-                <option>PR</option>
-                <option>PE</option>
-                <option>PI</option>
-                <option>RJ</option>
-                <option>RN</option>
-                <option>RS</option>
-                <option>RO</option>
-                <option>RR</option>
-                <option>SC</option>
-                <option>SP</option>
-                <option>SE</option>
-                <option>TO</option>
-                <option>DF</option>
+                <input type="text" minlength="3" maxlength="25" value=<?= $address->city ?> name="city"  required/>
+                <label><?= $address->state ?></label>
+                <select name="state" required>
+                <option <?php if($address->state == "AC") echo "selected" ?>>AC</option>
+                <option <?php if($address->state == "AL") echo "selected" ?>>AL</option>
+                <option <?php if($address->state == "AP") echo "selected" ?>>AP</option>
+                <option <?php if($address->state == "AM") echo "selected" ?>>AM</option>
+                <option <?php if($address->state == "BA") echo "selected" ?>>BA</option>
+                <option <?php if($address->state == "CE") echo "selected" ?>>CE</option>
+                <option <?php if($address->state == "ES") echo "selected" ?>>ES</option>
+                <option <?php if($address->state == "GO") echo "selected" ?>>GO</option>
+                <option <?php if($address->state == "MA") echo "selected" ?>>MA</option>
+                <option <?php if($address->state == "MT") echo "selected" ?>>MT</option>
+                <option <?php if($address->state == "MS") echo "selected" ?>>MS</option>
+                <option <?php if($address->state == "MG") echo "selected" ?>>MG</option>
+                <option <?php if($address->state == "PA") echo "selected" ?>>PA</option>
+                <option <?php if($address->state == "PB") echo "selected" ?>>PB</option>
+                <option <?php if($address->state == "PR") echo "selected" ?>>PR</option>
+                <option <?php if($address->state == "PE") echo "selected" ?>>PE</option>
+                <option <?php if($address->state == "PI") echo "selected" ?>>PI</option>
+                <option <?php if($address->state == "RJ") echo "selected" ?>>RJ</option>
+                <option <?php if($address->state == "RN") echo "selected" ?>>RN</option>
+                <option <?php if($address->state == "RS") echo "selected" ?>>RS</option>
+                <option <?php if($address->state == "RO") echo "selected" ?>>RO</option>
+                <option <?php if($address->state == "RR") echo "selected" ?>>RR</option>
+                <option <?php if($address->state == "SC") echo "selected" ?>>SC</option>
+                <option <?php if($address->state == "SP") echo "selected" ?>>SP</option>
+                <option <?php if($address->state == "SE") echo "selected" ?>>SE</option>
+                <option <?php if($address->state == "TO") echo "selected" ?>>TO</option>
+                <option <?php if($address->state == "DF") echo "selected" ?>>DF</option>
               </select>
                  <div class="checkbox">
                 <label>Endereço Padrão: </label>

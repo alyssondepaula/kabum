@@ -6,19 +6,20 @@ use Exception;
 use Src\Modules\Addresses\Mappers\AddressMap;
 use Src\Modules\Addresses\Repositories\AddressRepository;
 
-class CreateAddressUserCase {
+class SelectIsDefaultUserCase {
 
-    static function execute($street, $number, $zip, $complement, $city, $state, $isDefault = 0, $clientId){
+    static function execute($addressId, $clientId){
 
         try {
 
+            
             $mysqlAddressRepo = new AddressRepository();
+            
+            $mysqlAddressRepo->selectIsDefault($addressId, $clientId);
+     
 
-            $addressMap = AddressMap::AddressMap("",$street, $number, $zip, $complement, $city, $state, $isDefault, $clientId);
-            $mysqlAddressRepo->create($addressMap);
-
-            header('location: /addresses?id='.$clientId.'');
-
+             header('location: /addresses?id='.$clientId.'');
+    
         } catch (Exception $e) {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";

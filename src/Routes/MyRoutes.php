@@ -46,6 +46,12 @@ abstract class MyRoutes
         exit;
     }
 
+    protected function createaddress()
+    {
+        include PAGES.'/CreateAddress/index.php';
+        exit;
+    }
+
     protected function editaddress()
     {
         include PAGES.'/EditAddress/index.php';

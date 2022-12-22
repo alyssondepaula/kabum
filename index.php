@@ -1,5 +1,9 @@
 <?php 
 
+  echo '<style>'; 
+  include "index.css"; 
+  echo '</style>';
+
   require_once 'bootstrap.php'; 
   
   require_once DIR . '/src/Routes/Router.php';

@@ -6,20 +6,10 @@ use Src\Infra\MysqlPdo\Methods\Insert;
 use Src\Infra\MysqlPdo\Methods\Select;
 use Src\Infra\MysqlPdo\Methods\Update;
 use Src\Modules\Addresses\Entities\Address;
-use Src\Modules\Client\Entities\Client;
 use Src\Share\Session;
 
 class AddressRepository
 {
-    public function findClient($cpf){
-
-        $user = Session::getUser();
-
-        $select = new Select();
-        $results = $select->execute('clients', 'cpf = "'.$cpf.'" AND userId = "'.$user['id'].'"')->fetchObject();
-
-        return $results;
-    }
 
     public function findAdressById($adressId){
 
@@ -36,20 +26,29 @@ class AddressRepository
         return $results; 
     }
 
-    static function create(Client $client){
+    static function create(Address $address){
 
         $insert = new Insert();
 
-        $user = Session::getUser();
+        echo $address->street;
+        echo $address->number;
+        echo $address->zip;
+        echo $address->complement;
+        echo $address->city;
+        echo $address->state;
+        echo $address->isDefault;
+        echo $address->clientId;
 
-        $results = $insert->execute('clients',[
-            'name' => $client->name,
-            'birthDate' => $client->birthDate,
-            'cpf' => $client->cpf,
-            'rg' => $client->rg,
-            'phone' => $client->phone,
-            'userId' => $user['id']
-        ]);
+       $results = $insert->execute('addresses',[
+        'street' => $address->street,
+        'number' => $address->number,
+        'zip' => $address->zip,
+        'complement' => $address->complement,
+        'city' => $address->city,
+        'state' => $address->state,
+        'isDefault' => $address->isDefault,
+        'clientId' => $address->clientId,
+    ]);
         
         return $results;
 
@@ -63,7 +62,7 @@ class AddressRepository
             $results = $update->execute('addresses', 
             'clientId = "'.$address->clientId.'"',[
             'isDefault' => 0
-        ]);
+          ]);
         }
         $results = $update->execute('addresses', 
             'id = "'.$address->id.'"',[
@@ -88,6 +87,23 @@ class AddressRepository
 
         $results = $delete->execute('addresses', 'id = "'.$addressId.'"');
         return $results;
+    }
+
+    static function selectIsDefault(int $addressId, int $clientId){
+
+        $update = new Update();
+
+       $update->execute('addresses', 
+        'clientId = "'.$clientId.'"',[
+        'isDefault' => 0
+      ]);
+
+       $update->execute('addresses', 
+        'id = "'.$addressId.'"',[
+        'isDefault' => 1
+        ]);
+
+        return;
     }
 
 }

@@ -29,6 +29,7 @@ $client = ShowOneClientUserCase::execute($id);
   foreach ($addresses as $address) {
     $addressesrows .= '<tr class="tablerow">
                     <td class="blank_col">
+                    <a href=selectIsDefault.php?id='. $address['id'].'&clientId='. $client->id.'>
                      <i class="'.($address['isDefault'] == 1 ? 'fa-solid ': 'fa-regular').' fa-circle" style="color: var(--orangePrimary)"></i>
                     </a>
                     </td>
@@ -101,7 +102,7 @@ $client = ShowOneClientUserCase::execute($id);
       }
       ?>
      </div>
-     <a role="button" class="call" href="/createuser">Cadastrar cliente</a>
+     <a role="button" class="call" href="/createaddress?id=<?php echo $client->id?>">Cadastrar Endereço</a> 
     </div>
   </main>
   </body>
