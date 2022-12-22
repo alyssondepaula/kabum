@@ -39,6 +39,18 @@ abstract class MyRoutes
         include PAGES.'/EditClient/index.php';
         exit;
     }
+
+    protected function addresses()
+    {
+        include PAGES.'/Addresses/index.php';
+        exit;
+    }
+
+    protected function editaddress()
+    {
+        include PAGES.'/EditAddress/index.php';
+        exit;
+    }
     
     protected function __call($name, $arguments)
     {

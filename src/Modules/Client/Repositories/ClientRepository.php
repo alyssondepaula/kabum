@@ -80,10 +80,11 @@ class ClientRepository
     static function delete(int $id){
 
         $delete = new Delete();
-        $user = Session::getUser();
-
-        $results = $delete->execute('clients', 'id = "'.$id.'" AND userId = "'.$user['id'].'"');
-        return $results;
+       // $delete->execute('addresses', 'id = "'.$id.'"');
+        
+        $results = $delete->execute('clients', 'id = "'.$id.'"');
+       return $results;
+       return;
     }
 
 }

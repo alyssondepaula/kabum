@@ -19,11 +19,16 @@ echo "</style>";
                     <td>' . $client['rg'] . '</td>
                     <td>' . $client['phone'] . '</td>
                     <td class="blank_col">
-                    <a href=/editclient?id='. $client['id'].'>
-                       <i class="fa-solid fa-pen-to-square" style="color: blue"></i>
+                    <a href=/addresses?id='. $client['id'].'>
+                    <i class="fa-solid fa-truck" style="color: var(--orangePrimary)"></i>
                     </a>
                     </td>
-                    <td  class="blank_col">
+                    <td class="blank_col">
+                    <a href=/editclient?id='. $client['id'].'>
+                       <i class="fa-solid fa-pen-to-square" style="color: var(--bluePrimary)"></i>
+                    </a>
+                    </td>
+                  <td  class="blank_col">
                     <a href=deleteClient.php?id='. $client['id'] .'>
                       <i class="fa-solid fa-trash" style="color: red"></i>
                     </a>
@@ -61,6 +66,7 @@ echo "</style>";
                   <th>CPF</th>
                   <th>RG</th>
                   <th>Telefone</th>
+                  <th class='blank_col'></th>
                   <th class='blank_col'></th>
                   <th class='blank_col'></th>
               </tr>
