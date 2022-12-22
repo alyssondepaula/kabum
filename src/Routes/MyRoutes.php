@@ -27,6 +27,12 @@ abstract class MyRoutes
         include PAGES.'/App/index.php';
         exit;
     }
+
+    protected function createuser()
+    {
+        include PAGES.'/CreateClient/index.php';
+        exit;
+    }
     
     protected function __call($name, $arguments)
     {

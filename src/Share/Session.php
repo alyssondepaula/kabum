@@ -41,6 +41,12 @@ class Session
         return isset($_SESSION['user']['id']);
     }
 
+    public static function getUser()
+    {
+        self::start();
+        return self::isAuth() ? $_SESSION['user'] : null;
+    }
+
     public static function authPage()
     {
         if (self::isAuth()) {
