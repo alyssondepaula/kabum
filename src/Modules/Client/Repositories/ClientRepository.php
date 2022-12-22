@@ -1,6 +1,7 @@
 <?php
 namespace Src\Modules\Client\Repositories;
 
+use Src\Infra\MysqlPdo\Methods\Delete;
 use Src\Infra\MysqlPdo\Methods\Insert;
 use Src\Infra\MysqlPdo\Methods\Select;
 use Src\Modules\Client\Entities\Client;
@@ -42,6 +43,15 @@ class ClientRepository
         
         return $results;
 
+    }
+
+    static function delete(int $id){
+
+        $delete = new Delete();
+        $user = Session::getUser();
+
+        $results = $delete->execute('clients', 'id = "'.$id.'" AND userId = "'.$user['id'].'"');
+        return $results;
     }
 
 }

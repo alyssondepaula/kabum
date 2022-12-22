@@ -19,15 +19,15 @@ echo "</style>";
                     <td>' . $client['rg'] . '</td>
                     <td>' . $client['phone'] . '</td>
                     <td class="blank_col">
-                        <a >
-                           <i class="fa-solid fa-pen-to-square" style="color: blue"></i>
-                        </a>
+                    <a >
+                       <i class="fa-solid fa-pen-to-square" style="color: blue"></i>
+                    </a>
                     </td>
                     <td  class="blank_col">
-                        <a href=deleteClient.php?id='. $client['id'] .'>
-                          <i class="fa-solid fa-trash" style="color: red"></i>
-                        </a>
-                      </td>
+                    <a href=deleteClient.php?id='. $client['id'] .'>
+                      <i class="fa-solid fa-trash" style="color: red"></i>
+                    </a>
+                  </td>
                   </tr>';
 }
 
@@ -38,7 +38,8 @@ echo "</style>";
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>App - Gerenciador</title>
+         <script src="https://kit.fontawesome.com/bd1ede2b87.js" crossorigin="anonymous"></script>
     </head>
 <body>
    <?php include INCLUDES.'/Header/index.php'; ?>
