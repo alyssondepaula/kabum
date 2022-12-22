@@ -7,35 +7,25 @@ use Src\Modules\Client\Mappers\ClientMap;
 use Src\Modules\Client\Repositories\ClientRepository;
 
 
-class CreateClientUserCase {
+class UpdateClientUserCase {
 
-    static function execute($name, $birthDate, $cpf, $rg, $phone){
+    static function execute($id, $name, $birthDate, $cpf, $rg, $phone){
 
         try {
 
-
             $mysqlClientRepo = new ClientRepository();
-            
-            $client = $mysqlClientRepo->findClient($cpf);
 
-    
-            if($client){
-                throw new Exception("Cliente já existe");
-            }
+            $clientMap = ClientMap::ClientMap($id, $name, $birthDate, $cpf, $rg, $phone);
 
-            $clientMap = ClientMap::ClientMap("", $name, $birthDate, $cpf, $rg, $phone);
 
-            $mysqlClientRepo->create($clientMap);
-
+            $mysqlClientRepo->update($clientMap);
+      
             header('location: /app');
 
         } catch (Exception $e) {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";
         }
-
-
-       
 
     }
 

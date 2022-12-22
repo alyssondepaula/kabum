@@ -14,12 +14,12 @@ echo "</style>";
   foreach ($clients as $client) {
     $clientsrows .= '<tr class="tablerow">
                     <td>' . $client['name'] . '</td>
-                    <td>' . $client['birthDate'] . '</td>
+                    <td>' . date('d/m/Y', strtotime($client['birthDate'])) . '</td>
                     <td>' . $client['cpf'] . '</td>
                     <td>' . $client['rg'] . '</td>
                     <td>' . $client['phone'] . '</td>
                     <td class="blank_col">
-                    <a >
+                    <a href=/editclient?id='. $client['id'].'>
                        <i class="fa-solid fa-pen-to-square" style="color: blue"></i>
                     </a>
                     </td>

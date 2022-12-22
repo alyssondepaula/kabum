@@ -33,6 +33,12 @@ abstract class MyRoutes
         include PAGES.'/CreateClient/index.php';
         exit;
     }
+
+    protected function editclient()
+    {
+        include PAGES.'/EditClient/index.php';
+        exit;
+    }
     
     protected function __call($name, $arguments)
     {
