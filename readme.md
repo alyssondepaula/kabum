@@ -1,4 +1,24 @@
 
+# Área administrativa em PHP
+
+Sistema desenvolvido com a finalidade de desafio para a Kabum.
+
+
+
+
+## Techs utilizadas
+
+**Servidor:**  [Apache](https://www.apache.org/).
+
+**Linguagem de programação:**  [PHP](https://www.php.net/).
+
+**Banco de dados:**  [MYSQL](https://www.mysql.com/).
+
+**SGBD:**  [DBEAVER](https://dbeaver.io/).
+
+**Gerenciador de dependências:**  [Composer](https://getcomposer.org/).
+
+**Demais:**  [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
 
 # Implementação:
 
@@ -27,9 +47,9 @@ sudo service apache2 restart
 
 - Realizar a criação do banco de dados [MYSQL](https://www.mysql.com/)
 
-- Atualizar as variaveis de conexão: `HOST`,`DB`,`USER`,`PASS` presentes no caminho [`./src/Infra/MysqlPdo/Connection`](https://github.com/alyssondepaula/kabum/blob/main/src/Infra/MysqlPdo/Connection.php) de acordo com o seu banco.
+- Atualizar as variáveis de conexão: `HOST`,`DB`,`USER`,`PASS` presentes no caminho [`./src/Infra/MysqlPdo/Connection`](https://github.com/alyssondepaula/kabum/blob/main/src/Infra/MysqlPdo/Connection.php) de acordo com o seu banco.
 
-- No seu gerenciado de preferencia como por exemplo o [DBEAVER](https://dbeaver.io/) executar os seguintes comandos sql:
+- No seu gerenciador de preferência como por exemplo o [DBEAVER](https://dbeaver.io/) executar os seguintes comandos sql:
 
 - - Criação de tabelas (Migrations)
 - - - Tabela de usúarios:
