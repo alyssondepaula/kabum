@@ -127,4 +127,4 @@ VALUES ('rua da ajuda', 2, 36220000, 'casa', 'campolide', 'MG', 1, 1);
 ```bash
 composer install
 ```
-Pronto! Após instalação você terá uma pasta `vendor` na raiz, você agora pode acessar o projeto.
+Pronto! Após instalação você terá uma pasta `vendor` na raiz, você agora pode acessar o projeto usando seu ip local `localhost`.
