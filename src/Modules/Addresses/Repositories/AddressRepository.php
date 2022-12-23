@@ -29,6 +29,15 @@ class AddressRepository
 
         $insert = new Insert();
 
+        $update = new Update();
+        
+        if($address->isDefault == 1){
+            $results = $update->execute('addresses', 
+            'clientId = "'.$address->clientId.'"',[
+            'isDefault' => 0
+          ]);
+        }
+
        $results = $insert->execute('addresses',[
         'street' => $address->street,
         'number' => $address->number,
@@ -38,7 +47,7 @@ class AddressRepository
         'state' => $address->state,
         'isDefault' => $address->isDefault,
         'clientId' => $address->clientId,
-    ]);
+       ]);
         
         return $results;
 
