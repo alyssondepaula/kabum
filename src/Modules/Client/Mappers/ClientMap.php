@@ -5,7 +5,7 @@ use Src\Modules\Client\Entities\Client;
 
 abstract class ClientMap {
 
-    public static function ClientMap($id = "", $name, $birthDate, $cpf, $rg, $phone){
+    public static function ClientMap($id = "", $name, $birthDate, $cpf, $rg, $phone, $userId = ""){
 
         $client = new Client();
 
@@ -15,8 +15,8 @@ abstract class ClientMap {
         $client->cpf = $cpf;
         $client->rg = $rg;
         $client->phone = $phone;
+        $client->userId = $userId;
       
-
         return $client;
 
     }

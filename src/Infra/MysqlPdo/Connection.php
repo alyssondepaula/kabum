@@ -20,8 +20,6 @@ class Connection {
         $this->setConnection();
     }
 
-    
-
     private function setConnection() {
         try {
             $this->connection = new PDO(
@@ -53,7 +51,5 @@ class Connection {
             die('ERROR: ' . $e->getMessage());
         }
     }
-
-   
 
 }

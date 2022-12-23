@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>Criar conta - Gerenciador Kabum</title>
     </head>
 <body>
   <?php include INCLUDES.'/Header/index.php'; ?>
@@ -28,11 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form method="post">
                 <div>
                 <label>Nome:</label>
-                <input type="text" name="name" class="form-control" required>
+                <input type="text" minlength="3" maxlength="24" name="name" required>
                 <label>Email:</label>
-                <input type="email" name="email" class="form-control" required>
+                <input type="email" name="email" required>
                 <label>Password:</label>
-                <input type="password" name="password" class="form-control" required>
+                <input type="password" minlength="6" maxlength="24" name="password" required>
                 </div>
                 <button type="submit">Cadastrar</button>
             </form>

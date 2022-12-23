@@ -59,7 +59,7 @@ $client = ShowOneClientUserCase::execute($id);
 <!DOCTYPE html>
 <html>
     <head>
-         <title>App - Gerenciador</title>
+         <title>Endereços - Gerenciador</title>
          <script src="https://kit.fontawesome.com/bd1ede2b87.js" crossorigin="anonymous"></script>
     </head>
 <body>

@@ -9,5 +9,6 @@ class Client {
     public $cpf;
     public $rg;
     public $phone;
+    public $userId;
 }
 

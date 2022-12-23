@@ -13,7 +13,6 @@ class CreateClientUserCase {
 
         try {
 
-
             $mysqlClientRepo = new ClientRepository();
             
             $client = $mysqlClientRepo->findClient($cpf);
@@ -33,9 +32,6 @@ class CreateClientUserCase {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";
         }
-
-
-       
 
     }
 

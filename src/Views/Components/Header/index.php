@@ -3,7 +3,7 @@
 use Src\Share\Session;
 
 echo '<style>'; 
-include "style.css"; 
+include "headerstyle.css"; 
 echo '</style>';
 ?>
 

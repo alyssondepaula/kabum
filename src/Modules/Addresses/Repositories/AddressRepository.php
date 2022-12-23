@@ -6,7 +6,6 @@ use Src\Infra\MysqlPdo\Methods\Insert;
 use Src\Infra\MysqlPdo\Methods\Select;
 use Src\Infra\MysqlPdo\Methods\Update;
 use Src\Modules\Addresses\Entities\Address;
-use Src\Share\Session;
 
 class AddressRepository
 {
@@ -29,15 +28,6 @@ class AddressRepository
     static function create(Address $address){
 
         $insert = new Insert();
-
-        echo $address->street;
-        echo $address->number;
-        echo $address->zip;
-        echo $address->complement;
-        echo $address->city;
-        echo $address->state;
-        echo $address->isDefault;
-        echo $address->clientId;
 
        $results = $insert->execute('addresses',[
         'street' => $address->street,

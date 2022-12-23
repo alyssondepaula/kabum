@@ -80,11 +80,9 @@ class ClientRepository
     static function delete(int $id){
 
         $delete = new Delete();
-       // $delete->execute('addresses', 'id = "'.$id.'"');
-        
+
         $results = $delete->execute('clients', 'id = "'.$id.'"');
-       return $results;
-       return;
+        return $results;
     }
 
 }

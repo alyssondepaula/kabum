@@ -2,7 +2,6 @@
 namespace Src\Modules\Client\Usecases;
 
 use Exception;
-use Src\Modules\Client\Mappers\ClientMap;
 use Src\Modules\Client\Repositories\ClientRepository;
 
 

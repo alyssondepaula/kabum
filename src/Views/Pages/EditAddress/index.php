@@ -43,7 +43,7 @@ echo '</style>';
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>Editar Endereço - Gerenciador</title>
     </head>
 <body>
   <?php include INCLUDES.'/Header/index.php'; ?>
@@ -56,19 +56,19 @@ echo '</style>';
                 <div class="inrow">
                 <div>
                 <label>Rua:</label>
-                <input type="text" minlength="6" maxlength="60" value="<?= $address->street ?>" name="street" required/>
+                <input type="text" minlength="6" maxlength="48" value="<?= $address->street ?>" name="street" required/>
                 </div>
                 <div>
                 <label style="margin-left: 12;">N°:</label>
                 <input type="text" pattern="\d*" minlength="1" maxlength="4" value=<?= $address->number ?> name="number"  required/>
                 </div> 
                 </div>
-                <label>CEP:</label>
+                <label>CEP: (Somente números)</label>
                 <input type="text" pattern="\d*" minlength="8" maxlength="8" value=<?= $address->zip ?> name="zip"  required/>
                 <label>Complemento:</label>
-                <input type="text" minlength="2" maxlength="12" value=<?= $address->complement ?> name="complement"  required/>
+                <input type="text" minlength="3" maxlength="24" value=<?= $address->complement ?> name="complement"  required/>
                 <label>Cidade:</label>
-                <input type="text" minlength="3" maxlength="25" value=<?= $address->city ?> name="city"  required/>
+                <input type="text" minlength="3" maxlength="24" value=<?= $address->city ?> name="city"  required/>
                 <label><?= $address->state ?></label>
                 <select name="state" required>
                 <option <?php if($address->state == "AC") echo "selected" ?>>AC</option>

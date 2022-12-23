@@ -17,7 +17,6 @@ class UpdateClientUserCase {
 
             $clientMap = ClientMap::ClientMap($id, $name, $birthDate, $cpf, $rg, $phone);
 
-
             $mysqlClientRepo->update($clientMap);
       
             header('location: /app');

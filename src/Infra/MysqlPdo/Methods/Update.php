@@ -16,5 +16,5 @@ class Update {
         return $connection->execute($query, array_values($values));
         
     }
-    
+
 }

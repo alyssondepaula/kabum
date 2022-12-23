@@ -22,26 +22,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>Criar Cliente - Gerenciador</title>
     </head>
 <body>
   <?php include INCLUDES.'/Header/index.php'; ?>
   <main>
     <div class="content">
     <div class="box">
-        <h2>Cliente:</h2>
+        <h2>Criar Cliente:</h2>
             <form method="post">
                 <div>
                 <label>Nome:</label>
-                <input type="text" name="name" class="form-control" required>
+                <input type="text" name="name" minlength="3" maxlength="24" required>
                 <label>Data de Nascimento:</label>
-                <input type="date" name="birthdate" class="form-control" required>
-                <label>CPF:</label>
-                <input type="text" name="cpf" class="form-control" required>
-                <label>RG:</label>
-                <input type="text" name="rg" class="form-control" required>
-                <label>PHONE:</label>
-                <input type="text" name="phone" class="form-control" required>
+                <input type="date" name="birthdate" min="1922-01-01" max="2022-12-31" max step="1" required>
+                <label>CPF: (Somente números) </label>
+                <input type="text" name="cpf" pattern="\d*" minlength="11" maxlength="11" required>
+                <label>RG: (Somente números)</label>
+                <input type="text" name="rg" pattern="\d*" minlength="8" maxlength="8" required>
+                <label>PHONE: (Somente números)</label>
+                <input type="text" name="phone" pattern="\d*" minlength="10" maxlength="11" required>
                 </div>
                 <button type="submit">Cadastrar</button>
             </form>

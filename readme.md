@@ -110,7 +110,7 @@ ADD FOREIGN KEY (clientId) REFERENCES clients(id) ON DELETE CASCADE;
 
 ```sql
 INSERT INTO users (name, email, password)
-VALUES ('Admin', 'admin@admin.com', 'admin');
+VALUES ('Admin', 'admin@admin.com', 'admin1');
 
 INSERT INTO clients (name, birthDate, cpf, rg, phone, userId)
 VALUES ('client', '1994-06-22', 11111111111, 11222333, 99988776655, 1);

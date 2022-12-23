@@ -38,7 +38,7 @@ echo '</style>';
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>Editar Cliente - Gerenciador</title>
     </head>
 <body>
   <?php include INCLUDES.'/Header/index.php'; ?>
@@ -49,15 +49,15 @@ echo '</style>';
              <form method="post">
                 <div>
                 <label>Nome:</label>
-                <input type="text" minlength="2" maxlength="60" value="<?= $client->name ?>" name="name" required/>
+                <input type="text" name="name" minlength="3" maxlength="24" value="<?= $client->name ?>"  required/>
                 <label>Data de Nascimento:</label>
-                <input type="date" min="1922-01-01" max="2022-12-31" max step="1" value=<?= $client->birthDate ?> name="birthdate" class="form-control" required/>
-                <label>CPF:</label>
-                <input type="text" pattern="\d*" minlength="11" maxlength="11" value=<?= $client->cpf ?> name="cpf" class="form-control" required/>
-                <label>RG:</label>
-                <input type="text" pattern="\d*" minlength="11" maxlength="11" value=<?= $client->rg ?> name="rg" class="form-control" required/>
-                <label>PHONE:</label>
-                <input type="text" pattern="\d*" minlength="10" maxlength="11" value=<?= $client->phone ?> name="phone" class="form-control" required maxlength="4"/>
+                <input type="date" name="birthdate" min="1922-01-01" max="2022-12-31" max step="1" value=<?= $client->birthDate ?>  required/>
+                <label>CPF: (Somente números)</label>
+                <input type="text" name="cpf" pattern="\d*" minlength="11" maxlength="11" value=<?= $client->cpf ?>  required/>
+                <label>RG: (Somente números)</label>
+                <input type="text" name="rg" pattern="\d*" minlength="8" maxlength="8" value=<?= $client->rg ?>  required/>
+                <label>PHONE: (Somente números)</label>
+                <input type="text" name="phone" pattern="\d*" minlength="10" maxlength="11" value=<?= $client->phone ?>  required/>
                 </div>
                 <button type="submit">Salvar</button>
             </form>

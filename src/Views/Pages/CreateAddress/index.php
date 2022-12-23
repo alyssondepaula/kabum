@@ -32,7 +32,7 @@ echo '</style>';
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Site Oficial - Gerenciador</title>
+         <title>Criar Endereço - Gerenciador</title>
     </head>
 <body>
   <?php include INCLUDES.'/Header/index.php'; ?>
@@ -45,19 +45,19 @@ echo '</style>';
                 <div class="inrow">
                 <div>
                 <label>Rua:</label>
-                <input type="text" minlength="6" maxlength="60" name="street" required/>
+                <input type="text" name="street" minlength="6" maxlength="48"  required/>
                 </div>
                 <div>
                 <label style="margin-left: 12;">N°:</label>
-                <input type="text" pattern="\d*" minlength="1" maxlength="4" name="number"  required/>
+                <input type="text" name="number"  pattern="\d*" minlength="1" maxlength="4" required/>
                 </div> 
                 </div>
-                <label>CEP:</label>
-                <input type="text" pattern="\d*" minlength="8" maxlength="8" name="zip"  required/>
+                <label>CEP: (Somente números)</label>
+                <input type="text" name="zip" pattern="\d*" minlength="8" maxlength="8" required/>
                 <label>Complemento:</label>
-                <input type="text" minlength="3" maxlength="10" name="complement"  required/>
+                <input type="text" name="complement" minlength="3" maxlength="24" required/>
                 <label>Cidade:</label>
-                <input type="text" minlength="3" maxlength="10" name="city"  required/>
+                <input type="text" name="city" minlength="3" maxlength="24" required/>
                 <label>Estado:</label>
                 <select name="state" required>
                 <option selected>AC</option>

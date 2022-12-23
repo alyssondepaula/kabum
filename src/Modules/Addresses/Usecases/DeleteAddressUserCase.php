@@ -3,7 +3,6 @@ namespace Src\Modules\Addresses\Usecases;
 
 use Exception;
 use Src\Modules\Addresses\Repositories\AddressRepository;
-use Src\Share\Session;
 
 class DeleteAddressUserCase {
 

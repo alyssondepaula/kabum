@@ -6,8 +6,6 @@ use Src\Infra\MysqlPdo\Connection;
 
 class Select {
 
-  
-
     static function execute($table, $where = null, $order = null, $limit = null, $fields = '*') {
 
         $connection = new Connection(); 

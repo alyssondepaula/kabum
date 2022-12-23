@@ -26,9 +26,6 @@ class UserRepository
             'email' => $email,
             'password' => $password,
         ]);
-        
-        $select = new Select($email);
-        $results = $select->execute('users', 'id = "'.$results.'"')->fetchObject();
 
         return $results;
     }
