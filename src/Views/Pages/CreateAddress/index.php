@@ -38,6 +38,8 @@ echo '</style>';
   <?php include INCLUDES.'/Header/index.php'; ?>
   <main>
     <div class="content">
+    <div>
+    <a class="btnback" href="/addresses?id=<?php echo $id ?>" >Voltar</a>
     <div class="box">
         <h2>Cadastrar endereço:</h2>
              <form method="post">
@@ -100,6 +102,7 @@ echo '</style>';
                 <button type="submit">Salvar</button>
             </form>
         </div>
+      </div>
     </div>
   </main>
   </body>

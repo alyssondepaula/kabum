@@ -66,6 +66,8 @@ $client = ShowOneClientUserCase::execute($id);
    <?php include INCLUDES.'/Header/index.php'; ?>
   <main>
     <div class="content">
+    <div>
+    <a class="btnback" href="/app" >Voltar</a>
     <div class="box">
 
       <?php
@@ -101,6 +103,7 @@ $client = ShowOneClientUserCase::execute($id);
 
       }
       ?>
+      </div>
      </div>
      <a role="button" class="call" href="/createaddress?id=<?php echo $client->id?>">Cadastrar Endereço</a> 
     </div>

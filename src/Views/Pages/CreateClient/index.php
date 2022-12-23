@@ -1,6 +1,7 @@
 <?php
 
 use Src\Modules\Client\Usecases\CreateClientUserCase;
+use Src\Share\Session;
 
 echo '<style>'; 
 include "createclientstyle.css"; 
@@ -16,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 }
 
+ $user = Session::getUser();
   
 ?>
 
@@ -28,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <?php include INCLUDES.'/Header/index.php'; ?>
   <main>
     <div class="content">
+    <div>
+    <a class="btnback" href="/app" >Voltar</a>
     <div class="box">
         <h2>Criar Cliente:</h2>
             <form method="post">
@@ -46,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
+      </div>
     </div>
   </main>
   </body>

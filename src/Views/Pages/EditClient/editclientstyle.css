@@ -17,30 +17,9 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     background: rgb(237,171,40);
     background: linear-gradient(90deg, rgba(237,171,40,1) 0%, rgba(235,143,23,1) 35%, rgba(232,136,81,1) 100%);
-}
-
-.call {
-
-    width: 50%;
-    height: 42px;
-    color: var(--orangePrimary);
-    border-radius: 12px;
-    background-color: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-    cursor: pointer;
-
-}
-
-.calltitle {
-
-    color: white;
-    font-size: 4rem;
-
 }
 
 footer {
@@ -50,7 +29,7 @@ footer {
 }
 
 .box {
-    width: 70%;
+    width: 100%;
     min-height: 70%;
     background-color: var(--white);
     display: flex;
@@ -113,4 +92,29 @@ form > button {
     margin-top: 12px;
     padding: 24px; 
     
+}
+
+.content > div {
+    width: 70%;
+    min-height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.btnback {
+
+    padding: 12px 48px;
+    color: var(--orangePrimary);
+    border-radius: 12px;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    width: 20%;
+
 }

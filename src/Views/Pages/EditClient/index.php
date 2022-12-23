@@ -44,6 +44,8 @@ echo '</style>';
   <?php include INCLUDES.'/Header/index.php'; ?>
   <main>
     <div class="content">
+    <div>
+    <a class="btnback" href="/app">Voltar</a>
     <div class="box">
         <h2>Editar: <?php  echo $client->name ?></h2>
              <form method="post">
@@ -62,6 +64,7 @@ echo '</style>';
                 <button type="submit">Salvar</button>
             </form>
         </div>
+        <div>
     </div>
   </main>
   </body>
