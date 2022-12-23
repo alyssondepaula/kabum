@@ -22,7 +22,7 @@ class Session
             'email'=>$user->email
             
         ];
-        header('location: app.php');
+        header('location: /app');
         exit;
     }
 
@@ -31,7 +31,7 @@ class Session
         self::start();
 
         unset($_SESSION['user']);
-        header('location: index.php');
+        header('location: /');
         exit;
     }
 
@@ -50,7 +50,7 @@ class Session
     public static function authPage()
     {
         if (self::isAuth()) {
-            header('location: index.php');
+            header('location: /');
             exit;
         }
     }
