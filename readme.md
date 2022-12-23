@@ -76,7 +76,7 @@ CREATE TABLE `clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-- - - Tabela de Clientes:
+- - - Tabela de Endereços:
 ```sql
 CREATE TABLE `addresses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -95,26 +95,31 @@ CREATE TABLE `addresses` (
 ```sql
 ALTER TABLE clients
 ADD userId int(11) NOT NULL;
-
+```
+```sql
 ALTER TABLE addresses
 ADD clientId int(11) NOT NULL;
-
+```
+```sql
 ALTER TABLE clients
 ADD FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE;
-
+```
+```sql
 ALTER TABLE addresses
 ADD FOREIGN KEY (clientId) REFERENCES clients(id) ON DELETE CASCADE;
 ```
 
-- - Criação de dados (Seeds) -> `Opcional`:  Caso opter por esse seed, você deve executa-lo em logo após a Migrations.
+- - Criação de dados (Seeds) -> `Opcional`:  Caso escolha por esse seed, você deve executa-lo em logo após a "Migrations".
 
 ```sql
 INSERT INTO users (name, email, password)
 VALUES ('Admin', 'admin@admin.com', 'admin1');
-
+```
+```sql
 INSERT INTO clients (name, birthDate, cpf, rg, phone, userId)
 VALUES ('client', '1994-06-22', 11111111111, 11222333, 99988776655, 1);
-
+```
+```sql
 INSERT INTO addresses (street , `number` , zip , complement , city ,state , clientId, isDefault)
 VALUES ('rua da ajuda', 2, 36220000, 'casa', 'campolide', 'MG', 1, 1);
 ```
@@ -127,4 +132,4 @@ VALUES ('rua da ajuda', 2, 36220000, 'casa', 'campolide', 'MG', 1, 1);
 ```bash
 composer install
 ```
-Pronto! Após instalação você terá uma pasta `vendor` na raiz, você agora pode acessar o projeto usando seu ip local `localhost`.
+Pronto! Após instalação você terá uma pasta `vendor` na raiz, você agora pode acessar o projeto usando seu ip `localhost`.
